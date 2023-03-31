@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Icare</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- THEME CSS -->
+    <link href="css/layout.css" rel="stylesheet">
+
+
+</head>
+<body class="w-sigin">
+    <header class="w-header">
+        <nav class="navbar ui-bar">
+            <div class="navbar-header">
+                <div class="header-list navbar-left">
+                    <a class="btn btn-back" onclick="goBack()"><i class="fa fa-angle-left"></i></a>
+                </div>
+                <div class="header-list navbar-main">
+                    <h4>基本資料輸入</h4>
+                </div> 
+            </div>
+        </nav>
+    </header>
+    <main class="w-main">
+        <div class="sigin-wrap">
+            <div class="form-outer">
+                <div class="form-group ui-form-group-6">
+                    <label class="control-label">姓<span class="required-sign"></span></label>                        
+                    <input type="text" class="form-control " placeholder="" alt="">
+                </div>
+                <div class="form-group ui-form-group-6">
+                    <label class="control-label">名<span class="required-sign"></span></label>
+                    <input type="text" class="form-control " placeholder="" alt="">
+                </div>
+                <div class="form-group uiselect">
+                    <label class="control-label">性別<span class="required-sign"></span></label>
+                    <div class="select-box">
+                        <span class="select-icon"></span>
+                        <select class="selectpicker btn btn-select" title="請選擇">
+                            <option selected disabled>請選擇</option>
+                            <option>不公開</option>
+                            <option>男</option>
+                            <option>女</option>
+                        </select>                                        
+                    </div>
+                </div> 
+                <div class="form-group ui-form-group-6">
+                    <label class="control-label">電子信箱<span class="required-sign"></span></label>
+                    <input type="text" class="form-control " placeholder="" alt="" value="apple-0800@google.com">
+                </div> 
+                <div class="form-group ui-form-group-6">
+                    <label class="control-label">手機<span class="required-sign"></span></label>
+                    <input type="text" class="form-control " placeholder="" alt="" value="0912345678">
+                </div>
+                <div class="form-group uiselect">
+                    <label class="control-label">照護對象所在地區</label>
+                    <div class="select-box">
+                        <div id="twzipcode"></div>
+                    </div>
+                </div> 
+
+                <div class="btn-box">  
+                    <a href="index.html" class="btn btn-primary">送出</a>
+                </div>
+            </div>
+        </div>
+    </main> 
+
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/TWzipcode-master/jquery.twzipcode.min.js"></script>
+    <script src="js/into.js"></script>
+
+    <script type="text/javascript">
+                $('#twzipcode').twzipcode();
+    </script>
+</body>
+</html>

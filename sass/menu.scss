@@ -1,0 +1,115 @@
+html{
+	font-size: 625%;
+}
+// @font-face {
+//  font-family: "cwTeXYen";
+//  src: url(../vendor/googlefont/cwTeXYen-zhonly.ttf);
+// }
+body{
+	background: #222;
+	font-family: 'Microsoft YaHei', Arial, sans-serif;
+	//font-size: 1rem; /* 16px*75%=12px */
+}
+
+h1 {
+	font-size: .36rem;
+    // font-size: 36px;
+}
+h2{
+	font-size: .3rem;
+	// font-size: 30px;
+}
+h3{
+	font-size: .24rem;
+	// font-size: 24px;
+}
+h4{
+	font-size: .20rem;
+	// font-size: 21px;
+}
+
+h5{
+	font-size: .18rem;
+	// font-size: 18px;
+}
+h6{
+	font-size: .16rem;
+	// font-size: 16px;
+}
+p {
+    font-size: .15rem;
+    // font-size: 15px;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+	margin: 0;
+}
+
+a{
+	&:hover,&:active,&:focus{
+		text-decoration: none;	
+	}
+}
+
+ html,body {
+	position:relative;
+	height:auto;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+///////////////////
+///// menu
+///////////////////
+.navbar-outer{
+	margin-top: .3rem;
+	padding: .15rem .3rem;
+}
+
+.ui-nav{
+	.nav-list{
+
+		&:last-child{
+			border-bottom: 0;
+		}
+		a{
+			padding: .15rem 0;
+			font-size: .16rem;
+			color: #fff;
+			&:hover{
+				background: transparent;
+			}
+			i{
+				display: inline-block;
+				width: .4rem;
+				text-align: center;
+			}
+			.badge{
+				margin-left: .08rem;
+				background: #D84315;
+			}
+		}
+	}
+}
+
+
+.fixbt-nav{
+	position: fixed;
+    bottom: .2rem;
+    left: 50%;
+    transform: translate(-50%,0);
+	.nav-list{
+		display: inline-block;
+		a{
+			color: #fff;
+			font-size: .24rem;
+			padding: .1rem;
+		}
+	}
+}

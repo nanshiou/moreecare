@@ -1,0 +1,96 @@
+html {
+  font-size: 625%;
+}
+
+body {
+  background: #222;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+}
+
+h1 {
+  font-size: .36rem;
+}
+
+h2 {
+  font-size: .3rem;
+}
+
+h3 {
+  font-size: .24rem;
+}
+
+h4 {
+  font-size: .20rem;
+}
+
+h5 {
+  font-size: .18rem;
+}
+
+h6 {
+  font-size: .16rem;
+}
+
+p {
+  font-size: .15rem;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: none;
+}
+
+html, body {
+  position: relative;
+  height: auto;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-outer {
+  margin-top: .3rem;
+  padding: .15rem .3rem;
+}
+
+.ui-nav .nav-list:last-child {
+  border-bottom: 0;
+}
+.ui-nav .nav-list a {
+  padding: .15rem 0;
+  font-size: .16rem;
+  color: #fff;
+}
+.ui-nav .nav-list a:hover {
+  background: transparent;
+}
+.ui-nav .nav-list a i {
+  display: inline-block;
+  width: .4rem;
+  text-align: center;
+}
+.ui-nav .nav-list a .badge {
+  margin-left: .08rem;
+  background: #D84315;
+}
+
+.fixbt-nav {
+  position: fixed;
+  bottom: .2rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.fixbt-nav .nav-list {
+  display: inline-block;
+}
+.fixbt-nav .nav-list a {
+  color: #fff;
+  font-size: .24rem;
+  padding: .1rem;
+}

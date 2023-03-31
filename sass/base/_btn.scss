@@ -1,0 +1,122 @@
+
+
+$btn-config:(
+    light:(
+        class: 'light',
+        color: $gray-dark,
+    bg: #eee,
+        border-color: #eee
+    ),
+    default:(
+        class: 'default',
+        color: $gray7,
+    bg: #fff,
+        border-color: #ccc
+    ),
+    primary:(
+        class: 'primary',
+        color: #fff,
+        bg: $brand-primary,
+        border-color: $brand-primary
+    ),
+    accent:(
+        class: 'accent',
+    color: #fff,
+        bg: $brand-accent,
+        border-color: $brand-accent
+    ),
+    facebook:(
+        class: 'facebook',
+        color: $white,
+    bg: #3b5998,
+        border-color: #3b5998
+    ),
+    google:(
+        class: 'google',
+        color: $white,
+    bg: #ea4335,
+        border-color: #ea4335
+    ),
+    link:(
+        class: 'link',
+        color: $gray2,
+    bg: transparent,
+        border-color: transparent
+    )
+);
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  transition: background-color .15s;
+  border-color: $border;
+
+  &:hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active,
+  &.active:focus,
+  &:active:focus,
+  .open > &.dropdown-toggle {
+    color: $color;
+    background-color: darken($background, 6%);
+    border-color: darken($border, 8%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &,
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active,
+    &.active:focus,
+    &:active:focus{
+      background-color: $background;
+      border-color: $border;
+    }
+  }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+.btn {
+  // 結構
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  &:hover, &:focus, &:active{
+    color: #333;
+    background-color: #e6e6e6;
+  }
+}
+
+@each $name, $value in $btn-config {
+  $class: map-get($value, class);
+  $color: map-get($value, color);
+  $bg: map-get($value, bg);
+  $border-color: map-get($value, border-color);
+
+  .btn-#{$class}{
+    @include button-variant($color, $bg, $border-color);
+  }
+}
+

@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="zh-TW" class="silder">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Icare</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="vendor/swiper/css/swiper.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- THEME CSS -->
+    <link href="css/layout.css" rel="stylesheet">
+
+
+</head>
+<body>
+    <header class="w-header navbar-fixed-top" id="top">
+        <nav class="navbar ui-bar">
+            <div class="navbar-header">
+                <div class="header-list navbar-left">
+                    <a class="btn btn-back" onclick="goBack()"><i class="fa fa-angle-left"></i></a>
+                </div>
+                <div class="header-list navbar-main">
+                    <h4>訂單</h4>
+                </div>
+            </div>
+        </nav>
+        <div class="swiper-container ui-tab-nav" id="nav">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide tab-menu">
+                    <span class="active dot-tip dot-tip-3">待付款</span>
+                </div>
+                <div class="swiper-slide tab-menu">
+                    <span>已確認</span>
+                </div>  
+                <div class="swiper-slide tab-menu">
+                    <span>進行中</span>
+                </div>                            
+                <div class="swiper-slide tab-menu">
+                    <span>已預約</span>
+                </div>
+                <div class="swiper-slide tab-menu">
+                    <span>已完成</span>
+                </div>
+                <div class="swiper-slide tab-menu">
+                    <span>已拒絕</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="swiper-container ui-tab-content" id="page">
+        <div class="swiper-wrapper">
+            <!-- 一 -->
+            <div class="swiper-slide slidepage">
+                <div class="swiper-container scroll">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slidescroll">
+
+                                <div class="outer order-outer">
+                                    <div class="list">
+                                        <div class="item">
+                                            <div class="item-header">
+                                                <div class="inner inner-orderno">
+                                                    <div class="form-group inline-form-group">
+                                                        <label class="control-label">訂單編號:</label>
+                                                        <p class="form-control-static">001</p>
+                                                    </div>
+                                                    <p class="meta">2018-06-29 11:00</p>
+                                                </div>
+                                                <div class="inner inner-status">
+                                                    <p class="tbc">待付款</p>
+                                                </div>
+                                            </div>
+
+                                            <a class="item-content" href="#">
+                                                <div class="item-box item-info">
+                                                    <div class="inner user">
+                                                        <p>預約人員：<span>劉思思</span></p>
+                                                    </div>                                              
+                                                </div>
+      
+                                                <div class="item-box item-info">
+                                                    <p class="delivery">
+                                                        <span class="title">服務時間</span>
+                                                        <span class="date">7月21日-7月30日</span>
+                                                        <span class="time">10:30-16:30</span>
+                                                    </p>                                            
+                                                </div>     
+                                                <div class="item-box item-info">
+                                                    <div class="inner inner-address">
+                                                        <p>地點：台中市西屯區台灣大道三段660號15F-2</p> 
+                                                    </div>                                   
+                                                </div>                               
+                                            </a>
+                                            <div class="item-footer">
+                                                <div class="inner">
+                                                    <p>共10天</p>
+                                                </div>
+                                                <div class="inner amoutinfo">
+                                                    <p>$<span>15,000</span></p>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 二 -->
+            <div class="swiper-slide slidepage">
+                <div class="swiper-container scroll">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slidescroll">
+                            <div class="outer order-outer">
+                                <div class="list">
+
+                                    <div class="item">
+                                        <div class="item-header">
+                                            <div class="inner inner-orderno">
+                                                <div class="form-group inline-form-group">
+                                                    <label class="control-label">訂單編號:</label>
+                                                    <p class="form-control-static">004</p>
+                                                </div>
+                                                <p class="meta">2018-05-05 11:00</p>
+                                            </div>
+                                            <div class="inner inner-status">
+                                                <p class="tbc">已確認</p>
+                                            </div>
+                                        </div>
+
+                                        <a class="item-content" href="#">
+                                            <div class="item-box item-info">
+                                                <div class="inner user">
+                                                    <p>預約人員：<span>劉思思</span></p>
+                                                </div>                                              
+                                            </div>
+  
+                                            <div class="item-box item-info">
+                                                <p class="delivery">
+                                                    <span class="title">服務時間</span>
+                                                    <span class="date">7月21日-7月30日</span>
+                                                    <span class="time">10:30-16:30</span>
+                                                </p>                                            
+                                            </div>     
+                                            <div class="item-box item-info">
+                                                <div class="inner inner-address">
+                                                    <p>地點：台中市西屯區台灣大道三段660號15F-2</p> 
+                                                </div>                                   
+                                            </div>                               
+                                        </a>
+                                        <div class="item-footer">
+                                            <div class="inner">
+                                                <p>共10天</p>
+                                            </div>
+                                            <div class="inner amoutinfo">
+                                                <p>$<span>15,000</span></p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 三 -->
+            <div class="swiper-slide slidepage">
+                <div class="swiper-container scroll">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slidescroll">
+                            <div class="outer order-outer">
+                                <div class="list">
+
+                                    <div class="item">
+                                        <div class="item-header">
+                                            <div class="inner inner-orderno">
+                                                <div class="form-group inline-form-group">
+                                                    <label class="control-label">訂單編號:</label>
+                                                    <p class="form-control-static">004</p>
+                                                </div>
+                                                <p class="meta">2018-05-05 11:00</p>
+                                            </div>
+                                            <div class="inner inner-status">
+                                                <p class="tbc">進行中</p>
+                                            </div>
+                                        </div>
+
+                                        <a class="item-content" href="#">
+                                            <div class="item-box item-info">
+                                                <div class="inner user">
+                                                    <p>預約人員：<span>伍會思</span></p>
+                                                </div>                                              
+                                            </div>
+  
+                                            <div class="item-box item-info">
+                                                <p class="delivery">
+                                                    <span class="title">服務時間</span>
+                                                    <span class="date">8月21日-8月30日</span>
+                                                    <span class="time">10:30-16:30</span>
+                                                </p>                                            
+                                            </div>     
+                                            <div class="item-box item-info">
+                                                <div class="inner inner-address">
+                                                    <p>地點：台中市西屯區台灣大道三段660號15F-2</p> 
+                                                </div>                                   
+                                            </div>                               
+                                        </a>
+                                        <div class="item-footer">
+                                            <div class="inner">
+                                                <p>共10天</p>
+                                            </div>
+                                            <div class="inner amoutinfo">
+                                                <p>$<span>15,000</span></p>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="w-footer ft-fix">
+        <div class="bar-footer">
+            <a class="ft-list active" href="index.html">
+                <i class="fa fa-home"></i>
+                <span>首頁</span>
+            </a>
+            <a class="ft-list" href="search.html">
+                <i class="fa fa-search"></i>
+                <span>搜尋</span>
+            </a>
+            <a class="ft-list" href="schedule.html">
+                <i class="fa fa-calendar"></i>
+                <span>我的排程</span>
+            </a>
+            <a class="ft-list" href="member.html">
+                <i class="fa fa-user-o"></i>
+                <sup class="dot-sup"></sup>
+                <span>會員專區</span>
+            </a>                
+        </div>
+    </footer>  
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/swiper/js/swiper.min.js"></script>
+    <script src="js/into.js"></script>
+    <script type="text/javascript" src="js/swiper-slidetab.js"></script>
+    <script src="vendor/autohidingnavbar/dist/jquery.bootstrap-autohidingnavbar.min.js"></script>
+
+
+</body>
+</html>

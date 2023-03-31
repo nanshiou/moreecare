@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Icare</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/icomoon/style.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/mobiscroll-master/css/mobiscroll.scroller.css">
+    <link rel="stylesheet" href="vendor/mobiscroll-master/css/mobiscroll.scroller.ios7.css">
+    <link rel="stylesheet" href="vendor/mobiscroll-master/css/mobiscroll.animation.css">
+    <!-- THEME CSS -->
+    <link href="css/offcanvas.css" rel="stylesheet">
+    <link href="css/layout.css" rel="stylesheet">
+
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.core.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.scroller.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.select.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.datetime.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.scroller.ios7.js"></script>
+    <script src="vendor/mobiscroll-master/js/i18n/mobiscroll.i18n.zh.js"></script>
+
+    <script src="vendor/moment/js/moment.min.js"></script>
+
+</head>
+<body>
+
+    <header class="w-header">
+        <div class="overlay"></div>
+        <nav class="navbar ui-bar">
+            <div class="navbar-header">
+                <div class="header-list navbar-left">
+                    <button type="button" class="navbar-toggle collapsed pull-left" data-toggle="offcanvas">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="header-list navbar-main">
+                    <h4>搜尋服務</h4>
+                </div> 
+            </div>
+            <div id="navbar" class="collapse navbar-collapse sidebar-offcanvas">
+                <ul class="nav navbar-nav ui-nav">
+                    <li class="nav-list"><a href="order.html" class="item"><i class="fa fa-usd"></i>待付款區</a></li>
+                    <li class="nav-list"><a href="order.html" class="item"><i class="fa fa-file-o"></i>訂單查詢</a></li>
+                    <li class="nav-list"><a href="#" class="item"><i class="fa fa-bullhorn"></i>平台通知<span class="badge badge-primary">14</span></a></li>
+                    <li class="nav-list"><a href="#" class="item"><i class="fa fa-heart-o"></i>我的收藏</a></li>
+                    <li class="nav-list"><a href="#" class="item"><i class="fa fa-gear"></i>偏好設定</a></li>
+                    <li class="nav-list"><a href="#" class="item"><i class="fa fa-user-o"></i>我的個人資料設定</a></li>
+                    <li class="nav-list"><a href="#" class="item"><i class="fa fa-money"></i>付款設定</a></li>
+                    <li class="nav-list"><a href="data-setting.html" class="item"><i class="fa fa-male"></i>照護對象資料設定</a></li>
+                    <li class="nav-list"><a href="#" class="item"><i class="fa fa-ticket"></i>編輯優惠碼</a></li>
+                    <li class="nav-list"><a href="#" class="item"><i class="fa fa-sign-out"></i>登出</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </nav>
+    </header>
+
+    <main class="w-main w-main-fix">
+        <div class="outer search-outer">
+            <ul class="nav nav-tabs ui-tabs-card">
+                <li class="tab-list active"><a data-toggle="tab" href="#search">搜尋</a></li>
+                <li class="tab-list"><a data-toggle="tab" href="#people">指定</a></li>
+            </ul>
+            <div class="tab-content ui-content">
+                <div id="search" class="tab-pane fade in active">
+                    <div class="list">
+                        <div class="item item-form">                    
+                            <div class="form-group uiselect">
+                                <label class="control-label"><i class="fa fa-search"></i>服務類別</label>
+                                <div class="select-box">
+                                    <span class="select-icon"></span>
+                                    <select class="selectpicker btn btn-select" title="請選擇">
+                                        <option selected disabled>請選擇</option>
+                                        <option>照顧服務員</option>
+                                        <option>物理治療師</option>
+                                        <option>職能治療師</option>
+                                        <option>護理師護士</option>
+                                        <option>藝術輔療師</option>
+                                    </select>                                        
+                                </div>
+                            </div> 
+                        </div> 
+                        <div class="item item-form">                    
+                            <div class="form-group ui-form-group-2 time-select-form">
+                                <label class="control-label"><i class="fa fa-clock-o"></i>日期區間</label>                      
+                                <input type="text" class="form-control first-form mbsc-comp" id="date-start-2" placeholder="" alt="" value="2018-5-11">
+                                <input type="text" class="form-control padding-left-0 mbsc-comp" id="date-end-2" placeholder="" alt="" value="2018-5-11">
+                            </div>
+                        </div> 
+                        <div class="item item-form">                    
+                            <div class="form-group ui-form-group-2 time-select-form">
+                                <label class="control-label"><i class="fa fa-clock-o"></i>時間區間</label>  
+                                <input type="text" class="form-control first-form mbsc-comp" id="time-start-2" placeholder="" alt="" value="早上10:00">                    
+                                
+                                <input type="text" class="form-control padding-left-0 mbsc-comp" id="time-end-2" placeholder="" alt="" value="下午10:00">
+                            </div>
+                        </div> 
+                        <div class="item">           
+                            <div class="link">
+                                <a href="elements.html" class="item-inner">
+                                    <span class="left">
+                                        <i class="fa fa-suitcase"></i>工作項目
+                                    </span>
+                                    <span class="right">4項</span>
+                                </a>
+                            </div>          
+                        </div>  
+
+                        <div class="item item-form">                    
+                            <div class="form-group uiselect">
+                                <label class="control-label"><i class="fa fa-map-marker"></i>工作地點</label>
+                                <div class="select-box">
+                                    <div id="twzipcode"></div>
+                                </div>
+                            </div> 
+                        </div> 
+                        <div class="btn-box">
+                            <a href="search-list.html" class="btn btn-primary">搜尋</a>
+                        </div>                          
+                    </div>
+                </div>
+                <div id="people" class="tab-pane fade in">
+                    <div class="list">
+                        <div class="item item-form">                    
+                            <div class="form-group uiselect">
+                                <label class="control-label"><i class="fa fa-heart"></i>我的收藏</label>
+                                <div class="select-box">
+                                    <span class="select-icon"></span>
+                                    <select class="selectpicker btn btn-select" title="請選擇">
+                                        <option selected disabled>請選擇指定人員</option>
+                                        <option>林花媽</option>
+                                        <option>李大娘</option>
+                                        <option>王每美</option>
+                                        <option>張大鼠</option>
+                                        <option>李婷婷</option>
+                                    </select>                                        
+                                </div>
+                            </div> 
+                        </div> 
+                        <div class="item item-form">
+                            <div class="form-group uiselect">
+                                <label class="control-label"><i class="fa fa-search"></i>服務類別</label>
+                                <div class="select-box">
+                                    <span class="select-icon"></span>
+                                    <select class="selectpicker btn btn-select" title="請選擇">
+                                        <option selected disabled>請選擇</option>
+                                        <option>照顧服務員</option>
+                                        <option>物理治療師</option>
+                                        <option>職能治療師</option>
+                                        <option>護理師護士</option>
+                                        <option>藝術輔療師</option>
+                                    </select>                                        
+                                </div>
+                            </div> 
+                        </div>
+                        <div class="item item-form">                    
+                            <div class="form-group ui-form-group-2 time-select-form">
+                                <label class="control-label"><i class="fa fa-clock-o"></i>日期區間</label>                      
+                                <input type="text" class="form-control first-form mbsc-comp" id="date-start" placeholder="" alt="" value="2018-5-11">
+                                <input type="text" class="form-control padding-left-0 mbsc-comp" id="date-end" placeholder="" alt="" value="2018-5-11">
+                            </div>
+                        </div> 
+                        <div class="item item-form">                    
+                            <div class="form-group ui-form-group-2 time-select-form">
+                                <label class="control-label"><i class="fa fa-clock-o"></i>時間區間</label>  
+                                <input type="text" class="form-control first-form mbsc-comp" id="time-start" placeholder="" alt="" value="早上10:00">                    
+                                
+                                <input type="text" class="form-control padding-left-0 mbsc-comp" id="time-end" placeholder="" alt="" value="下午10:00">
+                            </div>
+                        </div> 
+                        <div class="item">           
+                            <div class="link">
+                                <a href="elements.html" class="item-inner">
+                                    <span class="left">
+                                        <i class="fa fa-suitcase"></i>工作項目
+                                    </span>
+                                    <span class="right">4項</span>
+                                </a>
+                            </div>          
+                        </div>  
+
+                        <div class="item item-form">                    
+                            <div class="form-group uiselect">
+                                <label class="control-label"><i class="fa fa-map-marker"></i>工作地點</label>
+                                <div class="select-box">
+                                    <div id="twzipcode-2"></div>
+                                </div>
+                                
+                            </div> 
+                        </div> 
+                        <div class="btn-box">
+                            <a href="technician.html" class="btn btn-primary">搜尋</a>
+                        </div>                          
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="w-footer ft-fix">
+        <div class="bar-footer">
+            <a class="ft-list" href="./index.html">
+                <i class="fa fa-home"></i>
+                <span>首頁</span>
+            </a>
+            <a class="ft-list active" href="search.html">
+                <i class="fa fa-search"></i>
+                <span>搜尋</span>
+            </a>
+            <a class="ft-list" href="schedule.html">
+                <i class="fa fa-calendar"></i>
+                <span>我的排程</span>
+            </a>
+            <a class="ft-list" href="member.html">
+                <i class="fa fa-user-o"></i>
+                <sup class="dot-sup"></sup>
+                <span>會員專區</span>
+            </a>                
+        </div>
+    </footer>    
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/TWzipcode-master/jquery.twzipcode.min.js"></script>
+    <script src="vendor/bs-offcanvas/js/offcanvas.js"></script>
+    <script src="js/into.js"></script>
+
+
+
+    <script>
+        $(function () {
+
+            $('#date-start, #date-end,#date-start-2, #date-end-2').mobiscroll().date({
+                theme: 'ios7',
+                display: 'bottom',
+                headerText: false,
+                lang: 'zh',
+                mode: 'scroller',
+                dateOrder: 'yymmdd', //面板中日期排列格式
+                dateFormat: 'yy-mm-dd', // 日期格式
+                maxWidth: 100
+            });
+
+        });
+
+        $(function () {
+
+            $('#time-start, #time-end,#time-start-2, #time-end-2').mobiscroll().time({
+                theme: 'ios7',
+                display: 'bottom',
+                mode: 'scroller',
+                headerText: false,
+                lang: 'zh',
+                timeWheels: 'Ahhii',
+                timeFormat: 'A hh:ii',
+                hourText: '時',
+                minuteText: '分',
+                maxWidth: 100
+            });
+
+        });  
+
+
+        $('#twzipcode').twzipcode();
+        $('#twzipcode-2').twzipcode();
+    </script>
+
+
+</body>
+</html>

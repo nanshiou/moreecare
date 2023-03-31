@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Icare</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/icomoon/style.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/mobiscroll-master/css/mobiscroll.scroller.css">
+    <link rel="stylesheet" href="vendor/mobiscroll-master/css/mobiscroll.scroller.ios7.css">
+    <link rel="stylesheet" href="vendor/mobiscroll-master/css/mobiscroll.animation.css">
+
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- THEME CSS -->
+    <link href="css/layout.css" rel="stylesheet">
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.core.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.scroller.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.select.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.datetime.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.scroller.ios7.js"></script>
+    <script src="vendor/mobiscroll-master/js/i18n/mobiscroll.i18n.zh.js"></script>
+
+    <script src="vendor/moment/js/moment.min.js"></script>
+
+</head>
+<body>
+    <header class="w-header">
+        <nav class="navbar ui-bar">
+            <div class="navbar-header">
+                <div class="header-list navbar-left">
+                    <a class="btn btn-back" onclick="goBack()"><i class="fa fa-angle-left"></i></a>
+                </div>
+                <div class="header-list navbar-main">
+                    <h4>照護對象資料設定</h4>
+                </div> 
+                <div class="header-list navbar-right">
+                    <a class="btn btn-back" href="#">儲存</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="w-main">
+        <div class="data-setting-wrap">
+            <div class="form-outer">
+                <div class="form-group ui-form-group-2">
+                    <label class="control-label">姓<span class="required-sign"></span></label>                        
+                    <input type="text" class="form-control " placeholder="請輸入姓氏" alt="姓">
+                </div>
+                <div class="form-group ui-form-group-2">
+                    <label class="control-label">名<span class="required-sign"></span></label>
+                    <input type="text" class="form-control " placeholder="請輸入名字" alt="名">
+                </div>
+                <div class="form-group ui-form-group-2">
+                    <label class="control-label">生日<span class="required-sign"></span></label>
+                    <input type="text" class="form-control first-form mbsc-comp" id="date-birthday" placeholder="" alt="" value="2018-5-11">
+                </div>
+                <div class="form-group uiselect">
+                    <label class="control-label">性別<span class="required-sign"></span></label>
+                    <div class="select-box">
+                        <span class="select-icon"></span>
+                        <select class="selectpicker btn btn-select" title="請選擇">
+                            <option selected disabled>請選擇</option>
+                            <option>不公開</option>
+                            <option>男</option>
+                            <option>女</option>
+                        </select>                                        
+                    </div>
+                </div>
+                <div class="form-group uiselect">
+                    <label class="control-label">身高</label>
+                    <div class="select-box">
+                        <span class="select-icon"></span>
+                        <select class="selectpicker btn btn-select" title="請選擇">
+                            <option selected disabled>請選擇</option>
+                            <option>160cm</option>
+                            <option>161cm</option>
+                            <option>162cm</option>
+                            <option>163cm</option>
+                            <option>164cm</option>
+                            <option>165cm</option>
+                            <option>166cm</option>
+                            <option>167cm</option>
+                            <option>168cm</option>
+                            <option>169cm</option>
+                            <option>170cm</option>
+                        </select>                                        
+                    </div>
+                </div>
+                <div class="form-group uiselect">
+                    <label class="control-label">體重</label>
+                    <div class="select-box">
+                        <span class="select-icon"></span>
+                        <select class="selectpicker btn btn-select" title="請選擇">
+                            <option selected disabled>請選擇</option>
+                            <option>60-69kg</option>
+                            <option>70-79kg</option>
+                            <option>80-89kg</option>
+                        </select>                                        
+                    </div>
+                </div>
+                <div class="form-group ui-form-group-2">
+                    <label class="control-label">身分證字號</label>                        
+                    <input type="text" class="form-control " placeholder="請輸入身分證字號" alt="身分證字號">
+                </div>
+                <div class="form-group uiselect">
+                    <label class="control-label">關係<span class="required-sign"></span></label>
+                    <div class="select-box">
+                        <span class="select-icon"></span>
+                        <select class="selectpicker btn btn-select" title="請選擇">
+                            <option selected disabled>請選擇</option>
+                            <option>父子</option>
+                            <option>父女</option>
+                            <option>母子</option>
+                            <option>母女</option>
+                        </select>                                        
+                    </div>
+                </div>
+                <div class="form-group ui-form-group-2">
+                    <label class="control-label">情況描述<span class="required-sign"></span></label>                        
+                    <textarea name="" id="" class="form-control " cols="30" rows="10"></textarea>
+                </div> 
+                <div class="form-group uiselect">
+                    <label class="control-label">工作地點</label>
+                    <div class="select-box">
+                        <div id="twzipcode"></div>
+                    </div>
+                </div>         
+            </div>
+            <div class="form-outer">
+                <div class="title">
+                    <p>緊急聯絡人</p>
+                </div>
+                <div class="form-group ui-form-group-2">
+                    <label class="control-label">姓<span class="required-sign"></span></label>                        
+                    <input type="text" class="form-control " placeholder="請輸入姓氏" alt="姓">
+                </div>
+                <div class="form-group ui-form-group-2">
+                    <label class="control-label">名<span class="required-sign"></span></label>
+                    <input type="text" class="form-control " placeholder="請輸入名字" alt="名">
+                </div>
+                <div class="form-group ui-form-group-2">
+                    <label class="control-label">手機<span class="required-sign"></span></label>
+                    <input type="tel" class="form-control" placeholder="" alt="" value="">
+                </div>  
+                <div class="btn-box">  
+                    <a href="member.html" class="btn btn-primary">確定</a>
+                </div>
+            </div>
+        </div>
+    </main> 
+
+
+    <!-- <script src="vendor/jquery/jquery-3.2.1.min.js"></script> -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/TWzipcode-master/jquery.twzipcode.min.js"></script>
+    <script src="js/into.js"></script>
+
+    <script>
+        $(function () {
+
+            $('#date-birthday').mobiscroll().date({
+                theme: 'ios7',
+                display: 'bottom',
+                headerText: false,
+                lang: 'zh',
+                mode: 'scroller',
+                dateOrder: 'yymmdd', //面板中日期排列格式
+                dateFormat: 'yy-mm-dd', // 日期格式
+                maxWidth: 100
+            });
+
+        });
+
+
+        $('#twzipcode').twzipcode();
+        $('#twzipcode-2').twzipcode();
+    </script>
+</body>
+</html>

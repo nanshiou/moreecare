@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Icare</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/icomoon/style.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- THEME CSS -->
+    <link href="css/layout.css" rel="stylesheet">
+
+
+
+</head>
+<body>
+
+    <header class="w-header">
+        <nav class="navbar ui-bar">
+            <div class="navbar-header">
+                <div class="header-list navbar-left">
+                    <a class="btn btn-back" onclick="goBack()"><i class="fa fa-angle-left"></i></a>
+                </div>
+                <div class="header-list navbar-main">
+                    <h4>照服員詳情</h4>
+                </div> 
+                <div class="header-list navbar-right">
+                    <a class="btn btn-back collect" href="#"><i class="fa fa-heart-o"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="w-main w-main-fix">
+        <div class="outer technician-outer">
+            <div class="tech-header">
+                <div class="img-box">
+                    <div class="imgthumb" style="background-image:url(images/caretaker/1.jpg);"></div>
+                </div>
+                <div class="avatar-box">
+                    <div class="caretaker">
+                        <p>林美慧</p>
+                    </div>
+                    <div class="seniority">
+                        <span class="badge">8年資歷</span>
+                    </div>                                  
+                </div>
+                <div class="inner-basic">
+                    <ul class="basic">
+                        <li>女</li>
+                        <li>50歲</li>
+                        <li>台中</li>
+                    </ul>  
+                    <a class="rating-box myBtn-remark">
+                        <div class="star-inner">
+                            <i class="fa fa-star active"></i>
+                            <i class="fa fa-star active"></i>
+                            <i class="fa fa-star active"></i>   
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>                                           
+                        </div>
+                        <span class="number-rating">3.0</span>
+                    </a>
+                </div>
+
+                <div class="other">
+                    <div class="time">
+                       每小時：<span>$250</span>
+                    </div>
+                    <div class="traffic">
+                        交通費：<span>$150</span>
+                    </div>                                    
+                </div>
+                <div class="license-box">
+                    <li><i class="icon-security"></i>照顧服務員證書</li>
+                    <li><i class="icon-security"></i>照顧服務技術士</li>
+                    <li><i class="icon-security"></i>保母人員技術士</li>
+                    <li><i class="icon-security"></i>CPR証照</li>
+                    <li><i class="icon-security"></i>普考護士執照</li>
+                </div>
+            </div>
+            <div class="tech-content">
+                <div class="textarea-box">
+                    <div class="title">自我介紹</div>
+                    <p>照顧服務員，即俗稱之看護，以前曾稱為病患服務員、居家服務員，工作的地方通常在醫療院所、護理機構、療養機構及其他社會福利機構或家庭內，協助病患、失能者或身心障礙者生活起居事宜，提供身體、生活照顧及家事服務。身體方面的照顧服務，像翻身、肢體關節活動、上下床、陪同散步、運動、協助使用其他日常生活輔助器具等，若老人或慢性病患需要從事復健治療服務，也必須協助進行；日常生活上，協助其更換衣物、沐浴、協助飲食及服藥、協助如廁，測量與記錄每日的飲食攝入與排出量等；其他的服務內容還包括幫忙家務工作，維持住家內部的環境清潔，平時固定訪視或是打電話問安，以確保病患的安全；有些也會提供餐飲服務，送三餐到病患家中、代為採買日用品、或是協助失能者或身心障礙者進行團康活動，有些老人有慢性疾病或健康狀況，照顧服務員也會定期帶他們去就醫取藥，或是緊急情況時協助送醫。此外，照顧服務員也會進行簡單的護理工作，回應病人的求助並提供適當協助或通知護理人員，以及辦理相關醫療照護所需手續來協助病人入院、轉院及出院等服務。</p>
+                </div>
+            </div>
+            <div class="tech-footer"></div>
+        </div>
+    </main>
+
+    <footer class="w-footer ft-fix">
+        <div class="btn-footer">
+            <a class="btn btn-primary" href="#">立刻預訂</a>
+        </div>
+        
+    </footer>    
+
+    <!-- Modal -->
+    <div class="modalcontainer" id="myModal-remark">
+        <div class="cu-modal ui-fsmodal">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">評價</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="outer remark-outer">
+                        <div class="list">
+                            <div class="item">
+                                <div class="left">
+                                    <div class="employer">桃園市八德區 Carol</div>
+                                </div>
+                                <div class="right">
+                                   <div class="rating-box">
+                                        <div class="star-inner">
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>   
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>                                           
+                                        </div>
+                                        <span class="number-rating">3.0</span>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="descr">
+                                <p>下次有機會一定提早跟你預約，以免妳被約滿了！</p>
+                            </div>
+                            <div class="date">2018-06-09</div>
+                        </div>
+                        <div class="list">
+                            <div class="item">
+                                <div class="left">
+                                    <div class="employer">桃園市八德區 Carol</div>
+                                </div>
+                                <div class="right">
+                                   <div class="rating-box">
+                                        <div class="star-inner">
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>   
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>                                           
+                                        </div>
+                                        <span class="number-rating">3.0</span>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="descr">
+                                <p>下次有機會一定提早跟你預約，以免妳被約滿了！</p>
+                            </div>
+                            <div class="date">2018-06-09</div>
+                        </div>
+                        <div class="list">
+                            <div class="item">
+                                <div class="left">
+                                    <div class="employer">桃園市八德區 Carol</div>
+                                </div>
+                                <div class="right">
+                                   <div class="rating-box">
+                                        <div class="star-inner">
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>   
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>                                           
+                                        </div>
+                                        <span class="number-rating">3.0</span>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="descr">
+                                <p>下次有機會一定提早跟你預約，以免妳被約滿了！</p>
+                            </div>
+                            <div class="date">2018-06-09</div>
+                        </div>
+                        <div class="list">
+                            <div class="item">
+                                <div class="left">
+                                    <div class="employer">桃園市八德區 Carol</div>
+                                </div>
+                                <div class="right">
+                                   <div class="rating-box">
+                                        <div class="star-inner">
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>
+                                            <i class="fa fa-star active"></i>   
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>                                           
+                                        </div>
+                                        <span class="number-rating">3.0</span>
+                                    </div>
+                                </div>   
+                            </div>
+                            <div class="descr">
+                                <p>下次有機會一定提早跟你預約，以免妳被約滿了！</p>
+                            </div>
+                            <div class="date">2018-06-09</div>
+                        </div>
+
+
+                        
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/into.js"></script>
+
+</body>
+</html>

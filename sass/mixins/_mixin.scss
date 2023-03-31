@@ -1,0 +1,102 @@
+@mixin border-bottom{
+	border-bottom:1px solid #eee;
+}
+@mixin font{
+	font-family:  "PingFangTC-Regular", DroidSansFallback, "Noto Sans TC", ヒラギノ角ゴ Pro, Hiragino Kaku Gothic Pro, Microsoft JhengHei;
+}
+@mixin rightgradient($from, $to) {
+	/* fallback/image non-cover color */
+	background: $from;
+	/* Firefox 3.6+ */
+	background: -moz-linear-gradient($from, $to);
+	/* Safari 4+, Chrome 1+ */
+	background: -webkit-gradient(to right, 0% 0%, 0% 100%, from($from), to($to));
+	/* Safari 5.1+, Chrome 10+ */
+	background: -webkit-linear-gradient(right, $from, $to);
+	/* Opera 11.10+ */
+	background: -o-linear-gradient(to right, $from, $to);
+}
+
+@mixin topgradient($top, $bottom){
+    background: $top; /* Old browsers */
+    background: -moz-linear-gradient(top,  $top 0%, $bottom 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$top), color-stop(100%,$bottom)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  $top 0%,$bottom 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  $top 0%,$bottom 100%); /* Opera 11.10+ */
+    background: linear-gradient(to bottom,  $top 0%,$bottom 100%); /* W3C */
+}
+
+@mixin gradient-striped($angle, $from, $to) {
+      $_angle-with-vendor-prefix: "";
+      $_angle: "";
+      @if $angle == "to top" or $angle == "bottom" {
+        $_angle-with-vendor-prefix: bottom;
+        $_angle: to top;
+      } @else if $angle == "to right" or $angle == "left" {
+        $_angle-with-vendor-prefix: left;
+        $_angle: to right;
+      } @else if $angle == "to bottom" or $angle == "top" {
+        $_angle-with-vendor-prefix: top;
+        $_angle: to bottom;
+      } @else if $angle == "to left" or $angle == "right" {
+        $_angle-with-vendor-prefix: right;
+        $_angle: to left;
+      } @else if $angle == "to top right" or $angle == "bottom left" {
+        $_angle-with-vendor-prefix: bottom left;
+        $_angle: to top right;
+      } @else if $angle == "to bottom right" or $angle == "top left" {
+        $_angle-with-vendor-prefix: top left;
+        $_angle: to bottom right;
+      } @else if $angle == "to bottom left" or $angle == "top right" {
+        $_angle-with-vendor-prefix: top right;
+        $_angle: to bottom left;
+      } @else if $angle == "to top left" or $angle == "bottom right" {
+        $_angle-with-vendor-prefix: bottom right;
+        $_angle: to top left;
+      } @else {
+        $_angle-with-vendor-prefix: $angle % 360;
+        $_angle: (90 - $angle) % 360;
+      }
+    /* fallback/image non-cover color */
+    background-color: $from;
+    /* Firefox 3.6+ */
+    background: linear-gradient($angle, $from, $to);
+    /* Safari 4+, Chrome 1+ */
+    background: -webkit-gradient(to right, 0% 0%, 0% 100%, $angle,  from($from), to($to));
+    /* Safari 5.1+, Chrome 10+ */
+    background: -webkit-linear-gradient(right,$angle, $from, $to);
+    /* Opera 11.10+ */
+    background: -o-linear-gradient(to right,$angle, $from, $to);
+}
+
+@mixin row{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    //margin-right: -15px;
+    //margin-left: -15px;
+    //width: 100%;
+}
+
+@mixin col{
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+
+@mixin form-control{
+	height: 45px;
+	box-shadow: none;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #eee;
+	padding-left: 40px;
+	padding-right: 20px;
+}
+

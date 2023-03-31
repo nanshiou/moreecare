@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="zh-TW" class="no-js">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Icare</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no" />
+
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/icomoon/style.css">
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/mobiscroll-master/css/mobiscroll.scroller.css">
+    <link rel="stylesheet" href="vendor/mobiscroll-master/css/mobiscroll.scroller.ios7.css">
+    <link rel="stylesheet" href="vendor/mobiscroll-master/css/mobiscroll.animation.css">
+    <!-- THEME CSS -->
+    <link href="css/layout.css" rel="stylesheet">
+
+
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.core.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.scroller.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.select.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.datetime.js"></script>
+    <script src="vendor/mobiscroll-master/js/mobiscroll.scroller.ios7.js"></script>
+    <script src="vendor/mobiscroll-master/js/i18n/mobiscroll.i18n.zh.js"></script>
+
+    <script src="vendor/moment/js/moment.min.js"></script>
+
+</head>
+<body>
+
+    <header class="w-header">
+        <nav class="navbar ui-bar">
+            <div class="navbar-header">
+                <div class="header-list navbar-left">
+                    <a class="btn btn-back" onclick="goBack()"><i class="fa fa-angle-left"></i></a>
+                </div>
+                <div class="header-list navbar-main">
+                    <h4>工作項目</h4>
+                </div> 
+            </div>
+        </nav>
+    </header>
+
+    <main class="w-main">
+        <div class="outer search-outer">
+            <div class="list">
+                <div class="item item-form">                    
+                    <div class="ui-form-check-4">
+                        <input class="form-check-input" type="checkbox" name="prodject" id="prodject-1" value="prodject">
+                        <label class="form-check-label" for="prodject-1">
+                            生活照顧：安全維護、穿脫衣物、身體清潔、大小便處理、小量灌腸(浣腸)、協助進食、用藥安全、移位、翻身擺位、扣背、簡易按摩、被動關節運動、就醫服務、陪伴服務 
+                        </label>
+                    </div>
+                </div> 
+                <div class="item item-form">                    
+                    <div class="ui-form-check-4">
+                        <input class="form-check-input" type="checkbox" name="prodject" id="prodject-2" value="prodject">
+                        <label class="form-check-label" for="prodject-2">
+                            家事服務：陪同外出、環境清潔、備餐 
+                        </label>
+                    </div>
+                </div> 
+                <div class="item item-form">                    
+                    <div class="ui-form-check-4">
+                        <input class="form-check-input" type="checkbox" name="prodject" id="prodject-3" value="prodject">
+                        <label class="form-check-label" for="prodject-3">
+                            代購物品：代購物品 
+                        </label>
+                    </div>
+                </div> 
+                <div class="item item-form">                    
+                    <div class="ui-form-check-4">
+                        <input class="form-check-input" type="checkbox" name="prodject" id="prodject-4" value="prodject">
+                        <label class="form-check-label" for="prodject-4">
+                            鼻胃管灌食： 鼻胃管灌食
+                        </label>
+                    </div>
+                </div> 
+
+
+                <div class="btn-box">
+                    <a href="search.html" class="btn btn-primary">確定</a>
+                </div>                          
+            </div>
+        </div>
+    </main>
+
+    <footer class="w-footer ft-fix">
+        <div class="bar-footer">
+            <a class="ft-list" href="./index.html">
+                <i class="fa fa-home"></i>
+                <span>首頁</span>
+            </a>
+            <a class="ft-list active" href="search.html">
+                <i class="fa fa-search"></i>
+                <span>搜尋</span>
+            </a>
+            <a class="ft-list" href="schedule.html">
+                <i class="fa fa-calendar"></i>
+                <span>我的排程</span>
+            </a>
+            <a class="ft-list" href="member.html">
+                <i class="fa fa-user-o"></i>
+                <sup class="dot-sup"></sup>
+                <span>會員專區</span>
+            </a>                
+        </div>
+    </footer>    
+
+
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/TWzipcode-master/jquery.twzipcode.min.js"></script>
+    <script src="js/into.js"></script>
+
+
+
+    <script>
+        $(function () {
+
+            $('#date-start, #date-end').mobiscroll().date({
+                theme: 'ios7',
+                display: 'bottom',
+                headerText: false,
+                lang: 'zh',
+                mode: 'scroller',
+                dateOrder: 'yymmdd', //面板中日期排列格式
+                dateFormat: 'yy-mm-dd', // 日期格式
+                maxWidth: 100
+            });
+
+        });
+
+        $(function () {
+
+            $('#time-start, #time-end').mobiscroll().time({
+                theme: 'ios7',
+                display: 'bottom',
+                mode: 'scroller',
+                headerText: false,
+                lang: 'zh',
+                timeWheels: 'Ahhii',
+                timeFormat: 'A hh:ii',
+                hourText: '時',
+                minuteText: '分',
+                maxWidth: 100
+            });
+
+        });  
+
+
+        $('#twzipcode').twzipcode();
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+.ui-navbar-fixed-top {
+	position:fixed;
+	top:0;
+	z-index:5;
+	width:100%;
+	background:#fff;
+}
+
+.ui-tab-nav {
+	border-bottom:1px solid #ebebeb;
+	.tab-menu{
+		span{
+			margin:0 5px;
+			text-align:center;
+			display:block;
+			line-height:2.5;
+			font-size:14px;
+			color:#333333;
+			position: relative;
+			&::before{
+				content: "";
+			    width: 36px;
+			    height: 3px;
+			    position: absolute;
+			    bottom: 0px;
+			    left: 50%;
+			    transform:translateX(-50%);
+			    background: transparent;				
+			}
+			&.active{
+				&::before{
+					background: #fa3c3c;
+				}
+			}
+		}
+	}
+}
+
+.ui-tab-content {
+	padding-top: .1rem;
+	margin-bottom:.45rem;
+	padding-bottom:.45rem;
+	height:100%;
+}
+.ui-tab-content .slidepage {
+	height:auto;
+}
+.scroll {
+	height:100%;
+	overflow: inherit !important;
+}
+.slidescroll {
+	height:auto;
+}
